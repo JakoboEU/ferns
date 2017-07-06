@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>My Fern Collection</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet"> 
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body>
+		<div class="page_wrapper">
+			<div class="container">
+				<h1>My Fern Collection</h1>
+				<div class="gallery">
+					<!-- gallery images 250px x 250px -->
+					<ul>
+						<li><a href="#" class="fern" data-id="polystichum_polyblepharum"><img class="fade" src="polystichum_polyblepharum/index.jpg" alt="Polystichum polyblepharum" title="Polystichum polyblepharum" /></a></li>
+						<li><a href="#" class="fern" data-id="polystichum_munitum"><img class="fade" src="polystichum_munitum/index.jpg" alt="Polystichum munitum" title="Polystichum munitum" /></a></li>
+						<li><a href="#" class="fern" data-id="fern01"><img class="fade" src="fern01/index.jpg" alt="Please help me be identified" title="Please help me be identified" /></a></li>
+						<li><a href="#" class="fern" data-id="fern02"><img class="fade" src="fern02/index.jpg" alt="Please help me be identified" title="Please help me be identified" /></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="fernModal" class="hidden">
+		</div>
+		<div id="fernModalTemplate" class="hidden">
+			<div class="header">
+				<div class="float-right"><a class="close" href="#">X</a></div>
+				<div>{{latinName}}</div>
+				<div>{{name}}</div>
+			</div>
+			<div class="body">
+				<div>
+					<div>
+						<!-- 500px x 320px -->
+						<img src="{{id}}/banner.jpg" />
+					</div>
+					<div>
+						<ul>
+							<li>Max height: {{maxHeight}}</li>
+							{{#hardy}}<li>Hardy</li>{{/hardy}}
+							{{#evergreen}}<li>Evergreen</li>{{/evergreen}}
+							{{#links}}{{#rhs}}<li><a href="{{.}}" class="fern_link">{{latinName}} on RHS Site</a></li>{{/rhs}}{{/links}}
+						</ul>
+					</div>
+				</div>
+				<div>
+					<!-- 350px x 360px -->
+					<div><img src="{{id}}/bottom01.jpg" /></div>
+					<!-- 390px x 360px -->
+					<div><img src="{{id}}/bottom02.jpg" /></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

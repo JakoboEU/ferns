@@ -1,0 +1,126 @@
+body {
+	font-family: 'Kurale', serif;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: normal;
+}
+
+.hidden {
+	display: none;
+}
+
+.float-right {
+	float: right;
+}
+
+.page_wrapper {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.container {
+	width: 1040px;
+	text-align: center;
+	border: 1px solid black;
+	margin-right: auto; 
+	margin-left: auto;
+}
+
+.gallery ul {
+	list-style: none;
+    padding-left: 0;
+    list-style-position: inside;
+	margin: 0;
+	border: 0;
+	padding:; 0;
+}
+
+.gallery ul li {
+	display: inline-block;
+	margin: 0 1px 0 1px;
+	padding 0;
+}
+
+.gallery img ul li img {
+	width: 250px;
+	height: 250px;
+}
+
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+	opacity: 0.5;
+ }
+
+
+ #fernModal {
+ 	border: 1px solid black;
+ 	margin: 5px;
+ 	width: 780px;
+ 	max-width: 100%;
+ 	height: 800px;
+  	max-height: 100%;
+ 	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	z-index: 1010;
+  	background: white;
+ }
+
+#fernModal .header {
+  	padding: 10px;
+  	border-bottom: 1px solid black;
+ }
+
+ #fernModal .header div:nth-child(1) {
+   	cursor: pointer;
+ }
+
+ #fernModal .header div:nth-child(1) a {
+ 	text-decoration: none;
+ 	color: black;
+ }
+
+ #fernModal .header div:nth-child(2) {
+   	font-size: 25px;
+ }
+
+ #fernModal .header div:nth-child(3) {
+   	font-size: 15px;
+ }
+
+ #fernModal .body {
+  	padding: 10px;
+ }
+
+ #fernModal .body {
+  	padding: 10px;
+ }
+
+ #fernModal .body div div {
+  	display: inline-block;
+  	top: 0; 
+    vertical-align:top;
+  	margin-bottom: 10px;
+ }
+
+#fernModal .body div:nth-child(1) div:nth-child(1) {
+  	width: 500px;
+}
+
+#fernModal .body div:nth-child(1) div:nth-child(2) {
+  	width: 250px;
+}
+
+#fernModal .body div:nth-child(2) div:nth-child(1) {
+  	padding-right: 10px;
+}
