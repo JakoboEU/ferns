@@ -23,6 +23,7 @@ h1 {
 
 .container {
 	width: 1040px;
+	max-width: 100%;
 	text-align: center;
 	border: 1px solid black;
 	margin-right: auto; 
