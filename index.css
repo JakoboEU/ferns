@@ -1,39 +1,3 @@
-body {
-	font-family: 'Kurale', serif;
-}
-
-h1 {
-	font-size: 40px;
-	font-weight: normal;
-}
-
-.hidden {
-	display: none;
-}
-
-.float-right {
-	float: right;
-}
-
-.page_wrapper {
-	width: 100%;
-	height: 100%;
-	text-align: center;
-}
-
-.page_wrapper.dialog_open {
-  -webkit-filter: blur(5px) grayscale(50%);
-}
-
-.container {
-	width: 1040px;
-	max-width: 100%;
-	text-align: center;
-	border: 1px solid black;
-	margin-right: auto; 
-	margin-left: auto;
-}
-
 .gallery ul {
 	list-style: none;
     padding-left: 0;
@@ -77,26 +41,6 @@ h1 {
 
 .fade:hover {
 	opacity: 0.5;
-}
-
-.footer ul {
-	list-style: none;
-    padding-left: 0;
-    list-style-position: inside;
-	margin: 0;
-	border: 0;
-	padding:; 0;
-}
-
-.footer ul li {
-	display: inline-block;
-	margin: 0 1px 10px 1px;
-	padding 0;
-}
-
-.footer ul li a {
-	color: black;
-	font-size: 12px;
 }
 
 #fernModal {
