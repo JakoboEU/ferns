@@ -3,7 +3,7 @@
 	"latinName": "Unknown Fern",
 	"name": "Please help name me",
 	"maxHeight": "100cm",
-	"evergreen": false,
+	"evergreen": true,
 	"hardy": true,
 	"location": "Large pot in back yard, shady spot with evening sun.",
 	"links": {
