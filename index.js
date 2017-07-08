@@ -26,6 +26,16 @@ $(document).ready(function() {
 		});
 	}
 
+	function showFernModal(fernId) {
+		var template = $('#fernModalTemplate').html();
+
+		$.get(fernId + '/fern.json', function(response) {
+			var rendered = Mustache.render(template, response);
+    		$('#fernModal').html(rendered);
+    		openModal('#fernModal');
+		});
+	}
+
 	$.ajaxSetup({
 		beforeSend: function(xhr) {
 	  		if (xhr.overrideMimeType) {
@@ -36,13 +46,7 @@ $(document).ready(function() {
 
 	$('.fern').click(function() {
 		var id = $(this).data('id');
-		var template = $('#fernModalTemplate').html();
-
-		$.get(id + '/fern.json', function(response) {
-			var rendered = Mustache.render(template, response);
-    		$('#fernModal').html(rendered);
-    		openModal('#fernModal');
-		});
+		showFernModal(id);
 	});
 
 	$('.contact').click(function() {
@@ -50,4 +54,11 @@ $(document).ready(function() {
 			openModal('#contactModal');
 		});
 	});
+
+	// is href to open modal
+
+	var hash = $(location).attr('hash');
+	if (hash) {
+		showFernModal(hash.substring(1, hash.length));
+	}
 });
