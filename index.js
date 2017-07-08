@@ -1,4 +1,9 @@
 $(document).ready(function() {
+	function closeFernModal() {
+		$('#fernModal').hide();
+		$('.page_wrapper').removeClass('dialog_open');
+	}
+
 	$.ajaxSetup({
 		beforeSend: function(xhr) {
 	  		if (xhr.overrideMimeType) {
@@ -17,9 +22,12 @@ $(document).ready(function() {
     		$('#fernModal').show();
     		$('.page_wrapper').addClass('dialog_open');
 
-			$('#fernModal .close').click(function(event) {
-				$('#fernModal').hide();
-    			$('.page_wrapper').removeClass('dialog_open');
+			$('#fernModal .close').click(function() {
+				closeFernModal();
+			});
+
+			$('.page_wrapper').click(function() {
+				closeFernModal();
 			});
 		});
 	});
