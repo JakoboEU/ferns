@@ -15,9 +15,11 @@ $(document).ready(function() {
 			var rendered = Mustache.render(template, response);
     		$('#fernModal').html(rendered);
     		$('#fernModal').show();
+    		$('.page_wrapper').toggleClass('dialog_open');
 
 			$('#fernModal .close').click(function(event) {
 				$('#fernModal').hide();
+    			$('.page_wrapper').toggleClass('dialog_open');
 			});
 		});
 	});
