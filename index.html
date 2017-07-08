@@ -32,9 +32,14 @@
 						<li><a href="#" class="fern" data-id="fern09"><img class="fade" src="fern09/index.jpg" alt="Please help me be identified" title="Please help me be identified" /><span>Unknown</span></a></li>
 					</ul>
 				</div>
+				<div class="footer">
+					<ul>
+						<li><a href="#contact" class="contact">Contact</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		<div id="fernModal" class="hidden">
+		<div id="fernModal" class="hidden modal">
 		</div>
 		<div id="fernModalTemplate" class="hidden">
 			<div class="header">
@@ -63,6 +68,28 @@
 					<!-- 390px x 360px -->
 					<div><img src="{{id}}/bottom02.jpg" /></div>
 				</div>
+			</div>
+		</div>
+		<div id="contactModal" class="hidden modal">
+			<div class="header">
+				<div class="float-right"><a class="close" href="#">X</a></div>
+				<div>Send Email</div>
+			</div>
+			<div class="body">
+				<form action="https://formspree.io/contact@jakobo.eu" method="POST">
+					<label>
+						<div>Message:</div>
+						<textarea name="name" cols="50" rows="10"></textarea>
+					</label>
+					<label>
+						<div>Your email address:</div>
+    					<input type="email" name="_replyto">
+    				</label>
+    				<label>
+						<div>Click to send email:</div>
+    					<input type="submit" value="Send Email">
+    				</label>
+				</form>
 			</div>
 		</div>
 	</body>

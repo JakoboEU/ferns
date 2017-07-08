@@ -1,7 +1,29 @@
 $(document).ready(function() {
-	function closeFernModal() {
-		$('#fernModal').hide();
-		$('.page_wrapper').removeClass('dialog_open');
+	var modalOpen;
+
+	function closeModal() {
+		if (modalOpen) {
+			$(modalOpen).hide();
+			$('.page_wrapper').removeClass('dialog_open');
+		}
+
+		modalOpen = null;
+	}
+
+	function openModal(modalId) {
+		closeModal();
+		modalOpen = modalId;
+    	$(modalId).show();
+    	$('.page_wrapper').addClass('dialog_open');
+
+		$(modalId + ' .close').click(function() {
+			closeModal();
+		});
+
+
+		$('.page_wrapper').click(function() {
+			closeModal();
+		});
 	}
 
 	$.ajaxSetup({
@@ -10,25 +32,22 @@ $(document).ready(function() {
 	    		xhr.overrideMimeType("application/json");
 	 		}
 	 	}
-		});
+	});
 
-	$('.fern').click(function(event) {
+	$('.fern').click(function() {
 		var id = $(this).data('id');
 		var template = $('#fernModalTemplate').html();
 
 		$.get(id + '/fern.json', function(response) {
 			var rendered = Mustache.render(template, response);
     		$('#fernModal').html(rendered);
-    		$('#fernModal').show();
-    		$('.page_wrapper').addClass('dialog_open');
+    		openModal('#fernModal');
+		});
+	});
 
-			$('#fernModal .close').click(function() {
-				closeFernModal();
-			});
-
-			$('.page_wrapper').click(function() {
-				closeFernModal();
-			});
+	$('.contact').click(function() {
+		setTimeout(function() {
+			openModal('#contactModal');
 		});
 	});
 });
